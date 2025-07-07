@@ -1,0 +1,39 @@
+
+/* Hide the default Streamlit footer */
+footer {
+    visibility: hidden;
+}
+
+
+.st-emotion-cache-zy6yx3 {
+	padding-top: 2rem;
+	padding-bottom: 1rem;
+	padding-left: 5rem; 
+	padding-right: 5rem; 
+	}
+	
+
+/* Style logo images */
+img {
+    vertical-align: bottom;
+    margin-bottom: -1rem;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Style SPANs to behave like LI for lists */
+span.li {
+    display: list-item;
+    margin-left: 2em;
+    padding-right: 25px;
+}
+
+.custom-footer {
+    
+    color: rgba(88, 88, 90, 0.4);
+    padding: 1rem;
+    font-size: 14px;
+    text-align: justify;
+    margin-top: 2rem;
+	margin-bottom: 2rem;
+}

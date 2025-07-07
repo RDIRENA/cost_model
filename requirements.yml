@@ -1,0 +1,9 @@
+name: cost_model
+dependencies:
+- pandas
+- plotly
+- protobuf
+- streamlit
+- altair
+- numpy
+- openpyxl
