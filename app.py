@@ -45,7 +45,6 @@ insert_logo(LOGO_IMAGE)
 st.markdown("<h3 style='text-align: center;font-family:Source Sans Pro;font-weight: 700;'>IRENA Solar PV Manufacturing Cost Model</h3>", unsafe_allow_html=True)
 st.markdown("<center><b><i>Draft Version</i></b></center><br>",unsafe_allow_html=True)
 st.markdown("<h3 style='text-align:center;background-color:#0073AB;font-family:Source Sans Pro;font-weight: 700;color:white;padding-left:25px;padding-right:25px;'>About the IRENA Solar PV Manufacturing Cost Model</h3>", unsafe_allow_html=True)
-st.markdown(f"<h3 style='background-color:#0073AB;font-family:Source Sans Pro;color:white'><img class='logo-img' src='data:image/png;base64,{base64.b64encode(open(Flag_IMAGE, 'rb').read()).decode()}' class='img-fluid' width=150em style='display:block;'></h3>", unsafe_allow_html=True)
 st.markdown(f"""<p style='background-color:#0073AB;padding-left:25px;padding-right:25px;padding-bottom:25px;font-family:Source Sans Pro;color:white'>The IRENA Solar PV Manufacturing Cost Model is a strategic decision-support tool developed under the CEM: Transforming Solar Supply Chains initiative, with the invaluable support of the Government of Australia. and the National Energy Efficiency Action Plan (PANEE), that expand on the commitment and measures included in the NDC.
 <br>This Excel-based tool provides a quantitative framework to model the levelized cost of production (LCOP) for solar PV modules (USD/Wp) across the complete crystalline silicon value chain, from polysilicon to final module assembly. It covers key global manufacturing markets—including the United States, Germany, China, India, Vietnam, and Australia—and evaluates leading process technologies (monocrystalline PERC and TOPCon). The model allows users to analyze the cost implications of distinct supply chain configurations, such as scenarios based on domestic production versus imported components.
 <br>The model is designed to empower policymakers, investors, and industry strategists by enabling them to quantify the impact of policy levers (e.g., tariffs, local content incentives), identify sources of national competitive advantage, and guide strategic investments required to build resilient and diversified solar PV supply chains through 2030.</p>""", unsafe_allow_html=True)
@@ -70,17 +69,17 @@ file_path = "graph1.xlsx"
 # Mapping from high-level scenario to display_name → sheet_name
 SCENARIO_MAP = {
     "Domestic": {
-        "Domestic - Manufacturing 2025: graph 1": "Domestic manufacturing in 2025",
-        "Domestic - Manufacturing 2030: graph 2": "Domestic manufacturing in 2030"
+        "Domestic - Manufacturing 2025": "Domestic manufacturing in 2025",
+        "Domestic - Manufacturing 2030": "Domestic manufacturing in 2030"
     },
     "Imported from China": {
-        "Imported - China - Polysilicon: graph 3":"Imported Polysilicon from China",
-        "Imported - China - Wafer: graph 4":"Imported Wafer from China",
-        "Imported - China - Cell: graph 5":"Imported Cell from China"
+        "Imported - China - Polysilicon":"Imported Polysilicon from China",
+        "Imported - China - Wafer":"Imported Wafer from China",
+        "Imported - China - Cell":"Imported Cell from China"
     },
     "Imported from Vietnam": {
-        "Imported - Vietnam - Wafer: graph 6":"Imported Wafer from Vietnam",
-        "Imported - Vietnam - Cell: graph 7":"Imported Cell from Vietnam"
+        "Imported - Vietnam - Wafer":"Imported Wafer from Vietnam",
+        "Imported - Vietnam - Cell":"Imported Cell from Vietnam"
     }
 }
 st.write("")
@@ -204,7 +203,7 @@ def plot_graph2_stacked_chart(df, import_country, sheet_name):
 file_path = FILE_MAP[import_country]
 sheet_names = get_graph2_sheets(file_path)
 
-exporting_country = col2.selectbox(f"Select ?? from {import_country}:", sheet_names)
+exporting_country = col2.selectbox(f"Select Country of Manufacturing from {import_country}:", sheet_names)
 
 # Step 3: Load sheet and plot
 df_graph2 = read_graph2_sheet(file_path, exporting_country)
