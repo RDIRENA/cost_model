@@ -203,7 +203,7 @@ def plot_graph2_stacked_chart(df, import_country, sheet_name):
 file_path = FILE_MAP[import_country]
 sheet_names = get_graph2_sheets(file_path)
 
-exporting_country = col2.selectbox(f"Select Country of Manufacturing from {import_country}:", sheet_names)
+exporting_country = col2.selectbox(f"Select Country of Manufacturing:", sheet_names)
 
 # Step 3: Load sheet and plot
 df_graph2 = read_graph2_sheet(file_path, exporting_country)
