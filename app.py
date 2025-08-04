@@ -6,7 +6,8 @@ import plotly.express as px
 import re
 
 st.set_page_config(page_title='Cost Model', layout = 'wide', page_icon = 'Images/logo2.png', initial_sidebar_state = 'auto')
-st.markdown(
+def insert_logo(imagePath):
+    st.markdown(
         f"""
         <div style="text-align: center; padding-top: 1rem;">
             <img src="data:image/png;base64,{base64.b64encode(open(imagePath, "rb").read()).decode()}" width="350" class="logo-img">
