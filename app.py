@@ -9,7 +9,9 @@ st.set_page_config(page_title='Cost Model', layout = 'wide', page_icon = 'Images
 def insert_logo(imagePath):
 	st.markdown(
     f"""
-        <center><img src="data:image/png;base64,{base64.b64encode(open(imagePath, "rb").read()).decode()}" class="img-fluid" width=350em ></center><br>
+    <div style="text-align: center; padding-top: 1rem;">
+        <img src="data:image/png;base64,{base64.b64encode(open(imagePath, "rb").read()).decode()}" width="350">
+    </div>
     """,
     unsafe_allow_html=True
 )
