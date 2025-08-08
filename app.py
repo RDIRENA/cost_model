@@ -93,7 +93,7 @@ st.write("Results from the following scenarios are presented:")
 st.write("•	**Domestic manufacturing in 2025 and 2030:** The component is sourced within the manufacturing country and an increase in the manufacturing capacity between 2025 and 2030 is considered. For this comparison, the model assumes a manufacturing capacity of 50 tons for polysilicon and 4 GW for wafers, cells, and modules across all markets in 2025 and 6 GW for wafers, cells, and modules across all markets in 2030.")
 st.write("•	**Imported components from China or Vietnam:** Polysilicon, wafer and cells are supplied from a different market than the manufacturing country of the solar PV module. The cost of final PV modules is presented considering polysilicon, wafer or cells, are imported from China or Vietnam, while all the module assembly is produced domestically. Manufacturing is only considered in 2025.")
 
-st.write("#### Key Steps:")
+st.write("##### Key Steps:")
 col1, _,_= st.columns(3)
 # First dropdown: select scenario category
 col1.markdown("**1. Select Scenario Type:**")
@@ -160,7 +160,7 @@ st.markdown("#### Comparative Analysis between Domestic and Imported at Country 
 st.write("This section illustrates the comparative cost structure of PV modules under two scenarios: **domestic manufacturing** and **imported components**. By visualizing these elements side by side, the graph highlights the cost competitiveness of each manufacturing route.")
 st.write("The purpose of this comparison is to identify which option—domestic production or import of components—offers a more economically viable solution for PV module manufacturing. A lower total cost indicates the more competitive manufacturing pathway, taking into account both direct production expenses and associated supply chain costs.")
 
-st.write("#### Key Steps:")
+st.write("##### Key Steps:")
 col1, _,_= st.columns(3)
 # Import country selection
 col1.markdown("**1. Select the Country of Import:**")
