@@ -35,7 +35,13 @@ span.li {
     margin-left: 2em;
     padding-right: 25px;
 }
-
+/* Sublist items */
+span.subli {
+    display: list-item;
+    margin-left: 4em; /* more indentation than parent list */
+    padding-right: 25px;
+	list-style-type: circle;
+}
 .custom-footer {
     
     color: rgba(88, 88, 90, 0.4);
