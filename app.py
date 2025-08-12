@@ -24,15 +24,19 @@ local_css("style.css")
 
 COMPONENT_COLORS = {
     "Polysilicon": "#00BFFF",
+    "Imported Polysilicon": "#00BFFF",
     "Wafer": "#008080",
-    "Cell Cost": "#FF8C00",
+    "Domestic Wafer (excl. polysilicon)": "#008080",
+    "Cell Cost (incl. domestic polysilicon and wafer)": "#FF8C00",
+    "Domestic Cell (excl. wafer)": "#FF8C00",
+    "Imported Cell (incl. polysilicon and wafer)": "#FF8C00",
     "Overheads": "#708090",
     "Electricity": "#DAA520",
     "Building and facilities": "#8B4513",
     "Equipment depreciation": "#6A5ACD",
     "Maintenance": "#228B22",
     "Labour": "#DC143C",
-    "Other material": "#BA55D3",
+    "Other material (e.g. front and back glass, encapsulant and others)": "#BA55D3",
     "ESG Certification": "#2E8B57",
     "Operating profits": "#4169E1"
 }
