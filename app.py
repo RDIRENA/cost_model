@@ -43,7 +43,7 @@ insert_logo(LOGO_IMAGE)
 
 
 st.markdown("<h3 style='text-align: center;font-family:Source Sans Pro;font-weight: 700;'>IRENA Solar PV Manufacturing Cost Model</h3>", unsafe_allow_html=True)
-
+st.markdown("")
 st.markdown("<h3 style='text-align:center;background-color:#0073AB;font-family:Source Sans Pro;font-weight: 700;color:white;padding-left:25px;padding-right:25px;'>About the IRENA Solar PV Manufacturing Cost Model</h3>", unsafe_allow_html=True)
 st.markdown(f"""<p style='background-color:#0073AB;padding-left:25px;padding-right:25px;padding-bottom:25px;font-family:Source Sans Pro;color:white'>
 The IRENA Solar PV Manufacturing Cost Model is a strategic decision-support tool developed under the Clean Energy Ministerial (CEM): Transforming Solar Supply Chains initiative, with the invaluable support of the Government of Australia and the National Energy Efficiency Action Plan (PANEE), that expand on the commitment and measures included in the Nationally Determined Contributions (NDCs).
@@ -149,7 +149,7 @@ fig.update_layout(
 
 st.plotly_chart(fig, use_container_width=True)
 st.markdown(
-    "<p style='font-size: 0.85em; font-style: italic; color: gray;'>Note: Usually, solar cell includes the costs of wafers and polysilicon. However, in the import scenarios of wafer and polysilicon costs are shown separately (excluded from the solar cell cost) to highlight contribution of each segment.</p>",
+    "<p style='font-size: 0.85em; font-style: italic; color: gray;'>Note: Usually, solar cell includes the costs of wafers and polysilicon. However, in the import scenarios of wafer and polysilicon, costs are shown separately (excluded from the solar cell cost) to highlight contribution of each segment.</p>",
     unsafe_allow_html=True
 )
 #################################################################
@@ -192,10 +192,10 @@ def plot_graph2_stacked_chart(df, import_country, sheet_name):
         st.markdown(title_cell)
 
     # Extract legend (components in col A, rows 4–15 → index 3–14)
-    components = df.iloc[3:14, 0]
+    components = df.iloc[2:14, 0]
 
     # Extract bar values (cols B–E → index 1–4)
-    data = df.iloc[3:14, 1:5]
+    data = df.iloc[2:14, 1:5]
 
     # Extract column names (countries) from row 2 (index 1)
     countries = df.iloc[1, 1:5]
@@ -236,7 +236,7 @@ fig_graph2 = plot_graph2_stacked_chart(df_graph2, import_country, exporting_coun
 st.plotly_chart(fig_graph2, use_container_width=True)
 # Add a note in small, italic, muted font
 st.markdown(
-    "<p style='font-size: 0.85em; font-style: italic; color: gray;'>Note: Usually, solar cell includes the costs of wafers and polysilicon. However, in the import scenarios of wafer and polysilicon costs are shown separately (excluded from the solar cell cost) to highlight contribution of each segment.</p>",
+    "<p style='font-size: 0.85em; font-style: italic; color: gray;'>Note: Usually, solar cell includes the costs of wafers and polysilicon. However, in the import scenarios of wafer and polysilicon, costs are shown separately (excluded from the solar cell cost) to highlight contribution of each segment.</p>",
     unsafe_allow_html=True
 )
 
